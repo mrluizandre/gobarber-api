@@ -17,6 +17,7 @@ routes.post('/sessions', SessionController.store);
 routes.post('/users', UserController.store);
 
 routes.use(authMiddleware); // Obedece a ordem das funções. Só é executados nas rotas abaixo
+routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);
 routes.get('/providers', ProviderController.index);
 routes.post('/files', upload.single('file'), FileController.store);
