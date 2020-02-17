@@ -22,6 +22,7 @@ routes.use(authMiddleware); // Obedece a ordem das funções. Só é executados 
 routes.get('/schedule', ScheduleController.index);
 routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);
+routes.delete('/appointments/:id', AppointmentController.delete);
 routes.get('/providers', ProviderController.index);
 routes.post('/files', upload.single('file'), FileController.store);
 routes.put('/users', UserController.update);
